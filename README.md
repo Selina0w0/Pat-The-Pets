@@ -6,7 +6,7 @@ Submitted by: Selina Fu
 
 Time spent: 15 hours spent in total
 
-Link to project: https://polydactyl-rainbow-scraper.glitch.me/
+Link to project: https://glitch.com/edit/#!/polydactyl-rainbow-scraper
 
 ## Required Functionality
 
