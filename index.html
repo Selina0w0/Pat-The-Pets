@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <title>Memorization Game.</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <!-- this is the start of content -->
+    <div id="container">
+    <h1 id="title" class="top left">Pat the Pets!</h1>
+    <h1 id="basicTitle" class="top left hidden">Block Memorizing Game</h1>
+    <!--for the settings icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <i id="settingsIcon" class="fa fa-gear top right" style="font-size:30px;" onmouseover="turnIcon()" onmouseout="stopIcon()" onclick="openSettings()"></i>
+    </div>
+    
+    <p id="description">
+      When the game starts, the background of the pets will light up in a sequence that they want to be pat in. 
+      After it stops, pat the pets by clicking them in the same sequence!
+      <br>There are 8 turns. It gets faster each turn. Beware of the timer. 
+      <br>You can make two mistakes before you lose.
+    </p>
+    <p id="basicDescription" class="hidden">
+      Repeat back the pattern by pressing buttons.
+      <br>There are 8 turns. It gets faster each turn. Beware of the timer. 
+      <br>You can make two mistakes before you lose.
+    </p>
+    
+    <button id="startBtn" onclick="startGame()">Start</button>
+    <button id="stopBtn" class="hidden" onclick="stopGame()">Stop</button>
+    
+    <!--all audios for the pet mode-->
+    <audio id="rabbitSound" src="https://cdn.glitch.global/c75b0a51-3ba9-42c3-988d-76ce3eed5593/8YK75GS-rabbit-animal-voice.mp3?v=1648126975263"></audio>
+    <audio id="catSound" src="https://cdn.glitch.global/c75b0a51-3ba9-42c3-988d-76ce3eed5593/cat sound?v=1648116084103"></audio>
+    <audio id="dogSound" src="https://cdn.glitch.global/c75b0a51-3ba9-42c3-988d-76ce3eed5593/dog sound?v=1648126823619"></audio>
+    <audio id="owlSound" src="https://cdn.glitch.global/c75b0a51-3ba9-42c3-988d-76ce3eed5593/owl sound?v=1648121559437"></audio>
+    
+    <!--all buttons for the pet mode-->
+    <div id = "gameButtonArea">
+      <button id="button1" onmousedown="playTone('catSound')" onmouseup="stopTone('catSound')" onclick="guess(1)"></button>
+      <button id="button2" onmousedown="playTone('dogSound')" onmouseup="stopTone('dogSound')" onclick="guess(2)"></button>
+      <button id="button3" onmousedown="playTone('catSound')" onmouseup="stopTone('catSound')" onclick="guess(3)"></button>
+      <button id="button4" onmousedown="playTone('dogSound')" onmouseup="stopTone('dogSound')" onclick="guess(4)"></button>
+      <button id="button5" onmousedown="playTone('rabbitSound')" onmouseup="stopTone('rabbitSound')" onclick="guess(5)"></button>   
+      <button id="button6" onmousedown="playTone('owlSound')" onmouseup="stopTone('owlSound')" onclick="guess(6)"></button>
+    </div>
+    
+    <!--all buttons for the basic mode-->
+    <div id = "basicGameButtonArea" class="hidden">
+      <button id="basicButton1" onmousedown="basicStartTone(1)" onmouseup="basicStopTone()" onclick="guess(1)"></button>
+      <button id="basicButton2" onmousedown="basicStartTone(2)" onmouseup="basicStopTone()" onclick="guess(2)"></button>
+      <button id="basicButton3" onmousedown="basicStartTone(3)" onmouseup="basicStopTone()" onclick="guess(3)"></button>
+      <button id="basicButton4" onmousedown="basicStartTone(4)" onmouseup="basicStopTone()" onclick="guess(4)"></button>
+      <button id="basicButton5" onmousedown="basicStartTone(5)" onmouseup="basicStopTone()" onclick="guess(5)"></button>
+      <button id="basicButton6" onmousedown="basicStartTone(6)" onmouseup="basicStopTone()" onclick="guess(6)"></button>
+    </div>
+
+    <img id="xImg" class="hidden" src="https://cdn.glitch.global/c75b0a51-3ba9-42c3-988d-76ce3eed5593/x?v=1648158451941">
+    <img id="fireworkGif" class="hidden" src="https://i.gifer.com/WS2k.gif">
+    
+    <p id="timer">Timer: 0:00 </p>
+    <p id="paragraphMistakes">Number of mistakes: 0</p>
+  </body>
+  
+  
+  <div id="popup" class="popup center">
+    <div class="title">
+      <label id="settingsTitle">Settings</label>
+    </div>
+    <div class="settings">
+      <label id="modeLabel">Mode: </label>
+      <button id="basicModeButton" onmousedown="select('basicModeButton');unselect('petModeButton');" onclick="changeToBasic()">Basic</button>
+      <button id="petModeButton" onmousedown="select('petModeButton');unselect('basicModeButton');" onclick="changeToPet()">Pet</button>
+      <br><br>
+      <label id="repeatLabel">Repeat:</label>
+      <button id="repeatOnButton" onmousedown="select('repeatOnButton');unselect('repeatOffButton');" onclick="repeatOn()">On</button>
+      <button id="repeatOffButton" onmousedown="select('repeatOffButton');unselect('repeatOnButton');" onclick="repeatOff()">Off</button>
+      <br>
+      <label id="repeatExplainLabel">(On: If you make a mistake, <br>the sequence would show again and timer would reset)</label>
+    </div>
+    <div class="btn">
+      <button id="doneButton" onclick="closeSettings()">Done</button>
+    </div>
+  </div>
+
+  
+</html>

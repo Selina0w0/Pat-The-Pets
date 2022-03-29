@@ -1,0 +1,265 @@
+/* a minimalist set of CSS resets */
+
+/* default to border-box */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* adjust typography defaults */
+body {
+  margin: 1rem;
+  font-family: "Trebuchet MS", sans-serif;
+  line-height: 1.5;
+  background-color: #395BAB;
+  color: #CED3FF; 
+}
+
+h1 {
+  font-family: "Trebuchet MS", Helvetica, sans-serif; 
+  color: #DADDFF; 
+}
+
+#container {
+  position: relative;
+}
+
+#settingsIcon {
+  position: absolute; 
+  padding: 5px;
+  top: 0;
+  right: 0;
+}
+
+button {
+  padding: 10px;
+  border-radius: 10px;
+  font-family: "Trebuchet MS", sans-serif;
+  background-color: #B6DDFF;
+  color: #2B2F51;
+  font-size: 14px;
+}
+
+#gameButtonArea > button {
+  width:200px;
+  height:200px;
+  margin:2px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Changes the display of the gameButtonArea buttons*/
+#button1 {
+    background-image: url('https://cdn.glitch.global/c75b0a51-3ba9-42c3-988d-76ce3eed5593/cat1?v=1648110650548');
+    background-size: 200px 200px;
+    background-color: lightyellow;
+}
+#button2 {
+    background-image: url('https://cdn.glitch.global/c75b0a51-3ba9-42c3-988d-76ce3eed5593/dog1?v=1648110653619');
+    background-size: 200px 200px;  
+    background-color: #FFCCCC;
+}
+#button3 {
+    background-image: url('https://cdn.glitch.global/c75b0a51-3ba9-42c3-988d-76ce3eed5593/cat2?v=1648110741368');
+    background-size: 200px 200px;  
+    background-color: grey;
+}
+#button4 {
+    background-image: url('https://cdn.glitch.global/c75b0a51-3ba9-42c3-988d-76ce3eed5593/dog2?v=1648110815694');
+    background-size: 200px 200px;  
+    background-color: #FFCC99;
+}
+#button5 {
+    background-image: url('https://cdn.glitch.global/c75b0a51-3ba9-42c3-988d-76ce3eed5593/rabbit?v=1648110976382');
+    background-size: 200px 200px;  
+    background-color: white;
+}
+#button6 {
+    background-image: url('https://cdn.glitch.global/c75b0a51-3ba9-42c3-988d-76ce3eed5593/owl?v=1648111089666');
+    background-size: 200px 200px;  
+    background-color: lightblue;
+}
+
+/* When buttons are clicked*/
+#button1:active, #button1.lit {
+    background-color:yellow;
+}
+#button2:active, #button2.lit {
+    background-color:red;
+}
+#button3:active, #button3.lit {
+    background-color:black;
+}
+#button4:active, #button4.lit {
+    background-color:orange;
+}
+#button5:active, #button5.lit {
+    background-color:grey;
+}
+#button6:active, #button6.lit {
+    background-color:blue;
+}
+
+
+#basicGameButtonArea > button {
+  width:200px;
+  height:200px;
+  margin:2px;
+}
+
+/* Changes the display of the basicGameButtonArea buttons*/
+#basicButton1 {
+    background: lightgreen;
+}
+#basicButton2 {
+    background: lightblue;
+}
+#basicButton3 {
+    background: pink;
+}
+#basicButton4 {
+    background: lightyellow;
+}
+#basicButton5 {
+    background: grey;
+}
+#basicButton6 {
+    background: violet;
+}
+
+/* When buttons are clicked*/
+#basicButton1:active, #basicButton1.lit {
+    background: green;
+}
+#basicButton2:active, #basicButton2.lit {
+    background: blue;
+}
+#basicButton3:active, #basicButton3.lit {
+    background: red;
+}
+#basicButton4:active, #basicButton4.lit {
+    background: yellow;
+}
+#basicButton5:active, #basicButton5.lit {
+    background: black;
+}
+#basicButton6:active, #basicButton6.lit {
+    background: purple;
+}
+
+#xImg {
+  width: 200px;
+  height: 200px;
+  z-index: 2;
+  position: absolute;
+}
+#fireworkGif {
+  width: 400px;
+  height: 400px;
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* images and videos max out at full width */
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+
+
+/* within the settings */
+.settings {
+  display: inline;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.popup {
+  width: 75%;
+  height: 75%;
+  padding: 30px, 20px;
+  background: #D6E3FA;
+  border-radius: 10px;
+  box-sizing: border-box;
+  z-index: 3;
+  text-align: center;
+  opacity: 1;
+  top: -200%;
+  transform: translate(-50%, -50%) scale(0.5);
+  transition: opacity 300ms ease-in-out,
+              top 500ms ease-in-out,
+              transform 1000ms ease-in-out;
+}
+
+.popup .title {
+  margin: 40px;
+  font-size: 30px;
+  color: #22437D;
+}
+
+.popup .settings {
+  color: #22437D;
+  font-size: 18px;
+}
+
+.popup .btn {
+  color: #22437D;
+  font-size: 18px;
+  vertical-align: bottom;
+  margin: 40px;
+}
+
+#basicModeButton {background: white;}
+#petModeButton {background: #B6DDFF;}
+#repeatOnButton {background: white;}
+#repeatOffButton {background: #B6DDFF;}
+#doneButton {background: white;font-size: 18px;}
+#repeatExplainLabel {color: #48679E;font-size: 16px;}
+
+
+/* for popup animation */
+.popup.active {
+  opacity: 1;
+  top: 50%;
+  transform:translate(-50%, -50%) scale(1);
+  transition: transform 300ms cubic-bezier(0.18, 0.89, 0.43, 1.19);
+}
+
+.popup > div {
+  position:relative;
+  top:10px;
+  opacity:0;
+}
+
+.popup.active > div{
+  top:0px;
+  opacity:1;
+}
+
+.popup.active .title{
+  transition: all 300ms ease-in-out 150ms;
+}
+
+.popup.active .settings{
+  transition: all 300ms ease-in-out 150ms;
+}
+
+.popup.active .btn{
+  transition: all 300ms ease-in-out 150ms;
+}
