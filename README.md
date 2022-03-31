@@ -48,23 +48,25 @@ The following **additional** features are implemented:
 
 ## Reflection Questions
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. <br />
-Animals icons: https://icons8.com/icon/ykURJwAQGYta/cat<br />
-Animal sounds: https://elements.envato.com/<br />
-Learning HTML, Javascript and CSS:<br />
-https://www.w3schools.com/<br />
-https://developer.mozilla.org/en-US/<br />
-https://learn.co<br />
-https://www.w3docs.com/<br />
-Implementing audio:<br />
-https://programminghead.com/how-to-play-audio-in-html-using-javascript/<br />
-https://gomakethings.com/how-to-play-a-sound-with-javascript/<br />
-Getting position:<br />
-https://tutorial.eyehunts.com/js/get-absolute-position-of-element-javascript-html-element-browser-window/<br />
-Creating Popup:<br />
-https://www.youtube.com/watch?v=XH5OW46yO8I<br />
-Decoding:<br />
-https://developer.chrome.com/<br />
-https://stackoverflow.com/<br />
+- Animals icons: 
+    - https://icons8.com/icon/ykURJwAQGYta/cat
+- Animal sounds: 
+    - https://elements.envato.com/
+- Learning HTML, Javascript and CSS:
+    - https://www.w3schools.com/
+    - https://developer.mozilla.org/en-US/
+    - https://learn.co
+    - https://www.w3docs.com/
+- Implementing audio:
+    - https://programminghead.com/how-to-play-audio-in-html-using-javascript/
+    - https://gomakethings.com/how-to-play-a-sound-with-javascript/
+- Getting position:
+    - https://tutorial.eyehunts.com/js/get-absolute-position-of-element-javascript-html-element-browser-window/<br />
+- Creating Popup:
+    - https://www.youtube.com/watch?v=XH5OW46yO8I
+- Decoding:
+    - https://developer.chrome.com/
+    - https://stackoverflow.com/
 
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it?<br />
 This was my first time using Javascript, HTML, and CSS, so I spent more time learning the formatting and getting used to them. I looked up many different resources, documentations, and videos explaning how different functions work and how these languages work together. There are a lot of times where I had to decide on one of the sources to focus on more or combine information from multiple sources together for my code. <br />
